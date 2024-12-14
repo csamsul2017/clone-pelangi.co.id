@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+header {
+  position: fixed;
+  /* border: 1px solid black; */
+  padding: 20px 10px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+header .nav-wripper {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo-wripper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header .logo-wripper h1 {
+  display: none;
+}
+
+header .logo-wripper h1 span {
+  color: red;
+  margin-left: 5px;
+}
+
+header .nav-wripper .logo-wripper img {
+  height: 40px;
+}
+
+header .nav-wripper .sub-nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+header .nav-wripper .sub-nav-wrapper .new-nav-list {
+  display: none;
+}
+
+header .nav-wripper .sub-nav-wrapper button {
+  padding: 7px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  margin-right: 15px;
+}
+
+/* #check,
+#un-check {
+  display: none;
+} */
+
+#check:checked ~ .nav-list-wripper {
+  display: block;
+}
+
+#un-check:checked ~ .nav-list-wripper {
+  display: none;
+}
+
+header .nav-list-wripper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+}
+
+header .nav-list-wripper > label {
+  float: right;
+  margin-top: 20px;
+  margin-right: 15px;
+  color: white;
+}
+
+header .nav-list-wripper .nav-list {
+  position: absolute;
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 25px 25px;
+  margin: 50px 15px 15px;
+  background-color: white;
+}
+
+.nav-list-wripper .nav-list ul li {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+/* Main */
+
+/* Hero Section */
+#hero {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  /* border: 1px solid black; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 100vh;
+  padding: 200px 30px 0;
+}
+
+#hero button {
+  padding: 15px 40px;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+}
+
+#partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 3 images per row */
+  gap: 25px; /* Spacing between images */
+  padding: 30px; /* Optional: Adds padding around the section */
+}
+
+#partners img {
+  max-width: 100%; /* Ensures images don't exceed the grid cell size */
+  height: auto; /* Maintains aspect ratio */
+  filter: grayscale(100%);
+  max-height: 30px; /* Adjust the max height to shrink the image */
+  object-fit: contain; /* Maintains aspect ratio and fits image inside its cell */
+}
+
+#about {
+  background-color: #1b1b1b;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+#about .company-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+#about .company-profile button {
+  padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid red;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+#about .about-identity {
+  margin: 50px 0;
+}
+
+#about .about-identity .identity-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+#about .about-identity .identity-card p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#about .about-identity span {
+  color: red;
+}
+
+#count {
+  padding: 10px;
+  margin-top: 100px;
+}
+
+#count .count-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#count .count-card .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -25px;
+  color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+#services h2 {
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+#services .service-card {
+  display: flex;
+  margin: 50px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: rgb(37, 37, 37);
+}
+
+#services .service-card img {
+  max-width: 100%;
+  height: 100px;
+  margin-right: 10px;
+}
+
+#services .service-card h3 {
+  padding-bottom: 10px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 100px 10px 100px;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 50px;
+}
+
+#contact .contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 50px 70px;
+}
+
+#contact .contact-card span {
+  color: red;
+  font-size: 40px;
+}
+
+#contact .maps-container {
+  border: 1px solid red;
+  height: 400px;
+}
+
+#faq {
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+#faq h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#faq ul li {
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding: 10px 10px;
+  margin: 25px 0;
+}
+
+#faq ul li .ask {
+  display: flex;
+  justify-content: space-between;
+}
+
+#faq ul li .ask button {
+  border: none;
+  background-color: transparent;
+}
+
+#faq ul li .answare {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 70px 25px;
+}
+
+/* .footer .address,
+.copy-right,
+.sitemap,
+.our-services,
+img {
+  background-color: #1b1b1b;
+} */
+
+footer .address-wrapper .flexbox img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer .address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .address h2 span {
+  color: red;
+}
+
+.footer .copy-right {
+  text-align: center;
+}
+
+.footer .copy-right .sosmed-logo {
+  margin: 5px 0px;
+}
+
+/* Breakpoint */
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1999px) {
+  header .logo-wripper h1 {
+    display: flex;
+  }
+
+  #hero {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #about .company-profile {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #about .about-identity {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #about .about-identity .identity-card {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #count {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 100px 75px;
+  }
+
+  #services .services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+    padding: 10px 10px;
+  }
+
+  #services .services-wrapper .service-card {
+    padding: 30px 25px;
+    margin: 5px 20px;
+  }
+
+  #contact .contact-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  footer .address-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  footer .address-wrapper .flexbox {
+    flex: 0 0 40%;
+  }
+
+  footer .address-wrapper .flexbox img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  footer .copy-right {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .copy-right .copy-right-text-wrapper {
+    text-align: left;
+  }
+
+  footer .copy-right .sosmed-logo i {
+    margin: auto 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 10px 100px;
+  }
+
+  header .logo-wripper h1 {
+    display: flex;
+  }
+
+  #jscheck {
+    display: none;
+  }
+
+  header .nav-wripper .sub-nav-wrapper .new-nav-list {
+    display: flex;
+  }
+
+  .nav-wripper .sub-nav-wrapper .new-nav-list ul {
+    display: flex;
+    gap: 25px;
+    padding: 10px 50px;
+  }
+
+  .nav-wripper .sub-nav-wrapper .new-nav-list ul li:hover {
+    color: red;
+  }
+
+  #hero {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #about {
+    display: flex;
+    padding: 100px 50px;
+  }
+
+  #about .company-profile {
+    align-items: flex-start;
+    text-align: left;
+    width: 70%;
+    margin-right: 10px;
+  }
+
+  #about .about-identity {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #about .about-identity .identity-card {
+    text-align: left;
+  }
+
+  #count {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #count .count-card {
+    padding: 30px 75px;
+  }
+
+  #services {
+    padding: 10px 50px;
+  }
+
+  #services .services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #services .services-wrapper .service-card {
+    margin: 10px;
+  }
+
+  #contact .contact-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .footer .address-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 25px 30px;
+    justify-content: space-between;
+  }
+
+  .footer .address-wrapper .icon-bottom {
+    width: 200px;
+  }
+
+  .footer .copy-right {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px 25px;
+  }
+
+  .footer .copy-right .sosmed-logo {
+    display: flex;
+    gap: 25px;
+  }
+
+  .footer .copy-right .sosmed-logo i {
+    padding: 10px;
+    background-color: #373737;
+    border-radius: 10px;
+  }
+}
