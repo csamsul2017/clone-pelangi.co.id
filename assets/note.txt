@@ -1,0 +1,10 @@
+BODY
+Padding = 25px
+Font family for title = relaway
+font family for contain = open sans
+
+NAVIGATION
+Color button = #e03a3c
+
+
+
