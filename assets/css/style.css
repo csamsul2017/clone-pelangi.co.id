@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --primary-color: #e03a3c;
+  --secondary-color: #1b1b1b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +14,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
-/*  */
+#header {
+  height: 80px;
+  transition: height 0.5s ease;
+}
 
 header {
   position: fixed;
-  /* border: 1px solid black; */
-  padding: 20px 10px;
+  padding: 0 10px;
   left: 0;
   right: 0;
   background-color: #fff;
@@ -24,6 +31,9 @@ header {
 header .nav-wripper {
   display: flex;
   justify-content: space-between;
+  /* padding: 20px 0; */
+  align-items: center;
+  height: 100%;
 }
 
 header .logo-wripper {
@@ -34,10 +44,11 @@ header .logo-wripper {
 
 header .logo-wripper h1 {
   display: none;
+  font-size: 2rem;
 }
 
 header .logo-wripper h1 span {
-  color: red;
+  color: var(--primary-color);
   margin-left: 5px;
 }
 
@@ -52,15 +63,18 @@ header .nav-wripper .sub-nav-wrapper {
 
 header .nav-wripper .sub-nav-wrapper .new-nav-list {
   display: none;
+  font-weight: 600;
 }
 
 header .nav-wripper .sub-nav-wrapper button {
   padding: 7px 15px;
   border: none;
   border-radius: 5px;
-  background-color: red;
+  background-color: var(--primary-color);
   color: white;
   margin-right: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 /* #check,
@@ -127,12 +141,17 @@ header .nav-list-wripper .nav-list {
   padding: 200px 30px 0;
 }
 
+#hero h1 {
+  font-size: 1.7rem;
+}
+
 #hero button {
   padding: 15px 40px;
   color: #fff;
-  background-color: red;
+  background-color: var(--primary-color);
+  font-size: 1.1rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #partners {
@@ -359,7 +378,11 @@ footer .address-wrapper .flexbox img {
 /* Breakpoint */
 
 /* Tablet */
-@media (min-width: 481px) and (max-width: 1999px) {
+@media (min-width: 700px) and (max-width: 1999px) {
+  header {
+    padding: 0 100px;
+  }
+
   header .logo-wripper h1 {
     display: flex;
   }
@@ -367,6 +390,18 @@ footer .address-wrapper .flexbox img {
   #hero {
     text-align: left;
     align-items: flex-start;
+    padding: 0 100px;
+    padding-top: 80px;
+    justify-content: center;
+    padding-right: 500px;
+  }
+
+  #hero h1 {
+    font-size: 3rem;
+  }
+
+  #hero p {
+    font-size: 1.5rem;
   }
 
   #about .company-profile {
@@ -460,10 +495,16 @@ footer .address-wrapper .flexbox img {
     display: flex;
     gap: 25px;
     padding: 10px 50px;
+    /* font-weight: 400; */
   }
 
+  /* .nav-wripper .sub-nav-wrapper .new-nav-list ul li {
+    font-weight: bold;
+    font-size: 2rem;
+  } */
+
   .nav-wripper .sub-nav-wrapper .new-nav-list ul li:hover {
-    color: red;
+    color: var(--primary-color);
   }
 
   #hero {
