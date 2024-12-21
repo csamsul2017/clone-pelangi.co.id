@@ -21,7 +21,7 @@
 
 header {
   position: fixed;
-  padding: 0 10px;
+  padding: 0 30px;
   left: 0;
   right: 0;
   background-color: #fff;
@@ -295,6 +295,14 @@ header .nav-list-wripper .nav-list {
   padding: 50px 70px;
 }
 
+#contact .contact-wrapper {
+  gap: 30px;
+}
+
+#contact .contact-wrapper .contact-card {
+  flex: 1;
+}
+
 #contact .contact-card span {
   color: red;
   font-size: 40px;
@@ -306,7 +314,7 @@ header .nav-list-wripper .nav-list {
 }
 
 #faq {
-  padding: 10px;
+  padding: 10px 100px;
   margin-bottom: 100px;
 }
 
@@ -351,6 +359,10 @@ header .nav-list-wripper .nav-list {
 img {
   background-color: #1b1b1b;
 } */
+
+.footer {
+  padding: 30px 100px;
+}
 
 footer .address-wrapper .flexbox img {
   object-fit: cover;
@@ -404,6 +416,14 @@ footer .address-wrapper .flexbox img {
     font-size: 1.5rem;
   }
 
+  #partners {
+    padding: 50px 100px;
+  }
+
+  #about {
+    padding: 50px 100px;
+  }
+
   #about .company-profile {
     align-items: flex-start;
     text-align: left;
@@ -427,6 +447,10 @@ footer .address-wrapper .flexbox img {
     margin: 100px 75px;
   }
 
+  #services {
+    padding: 50px 100px;
+  }
+
   #services .services-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -440,9 +464,16 @@ footer .address-wrapper .flexbox img {
     margin: 5px 20px;
   }
 
+  #contact {
+    padding: 50px 100px;
+  }
+
   #contact .contact-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+
+  #contact .contact-wrapper .contact-card {
   }
 
   footer .address-wrapper {
@@ -514,7 +545,7 @@ footer .address-wrapper .flexbox img {
 
   #about {
     display: flex;
-    padding: 100px 50px;
+    padding: 100px 100px;
   }
 
   #about .company-profile {
@@ -536,7 +567,7 @@ footer .address-wrapper .flexbox img {
 
   #count {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   #count .count-card {
@@ -562,10 +593,14 @@ footer .address-wrapper .flexbox img {
     justify-content: space-evenly;
   }
 
+  .footer {
+    padding: 50px 100px;
+  }
+
   .footer .address-wrapper {
     display: flex;
     gap: 20px;
-    padding: 25px 30px;
+    /* padding: 25px 30px; */
     justify-content: space-between;
   }
 
@@ -577,7 +612,7 @@ footer .address-wrapper .flexbox img {
     display: flex;
     justify-content: space-between;
     text-align: left;
-    padding: 10px 25px;
+    padding: 10px 0;
   }
 
   .footer .copy-right .sosmed-logo {
