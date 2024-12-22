@@ -314,7 +314,7 @@ header .nav-list-wripper .nav-list {
 }
 
 #faq {
-  padding: 10px 100px;
+  padding: 10px 10px;
   margin-bottom: 100px;
 }
 
@@ -361,7 +361,7 @@ img {
 } */
 
 .footer {
-  padding: 30px 100px;
+  padding: 30px 10px;
 }
 
 footer .address-wrapper .flexbox img {
@@ -474,6 +474,14 @@ footer .address-wrapper .flexbox img {
   }
 
   #contact .contact-wrapper .contact-card {
+  }
+
+  #faq {
+    padding: 10px 100px;
+  }
+
+  .footer {
+    padding: 10px 100px;
   }
 
   footer .address-wrapper {
